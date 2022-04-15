@@ -1,5 +1,5 @@
 ThisBuild / scalaVersion     := "2.13.8"
-ThisBuild / versionScheme := Some("early-semver")
+ThisBuild / versionScheme    := Some("early-semver")
 ThisBuild / organization     := "io.github.keirlawson"
 
 lazy val root = (project in file("."))
