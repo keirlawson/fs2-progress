@@ -1,4 +1,7 @@
-ThisBuild / scalaVersion     := "2.13.8"
+val scala213 = "2.13.8"
+val scala3 = "3.1.2"
+
+ThisBuild / scalaVersion     := scala213
 ThisBuild / versionScheme    := Some("early-semver")
 ThisBuild / organization     := "io.github.keirlawson"
 
@@ -8,7 +11,9 @@ lazy val root = (project in file("."))
     libraryDependencies ++= Seq(
       "me.tongfei" % "progressbar" % "0.9.3",
       "co.fs2" %% "fs2-core" % "3.2.7"
-    )
+    ),
+    crossScalaVersions := List(scala213, scala3),
+    releaseCrossBuild := true
   )
 
 publishTo := sonatypePublishToBundle.value
