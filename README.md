@@ -1,4 +1,7 @@
 # fs2-progress
+
+![demo](demo.gif)
+
 A command line progress bar that you can feed your streams to. Published for Scala 2.13 and 3.1.
 
 Wraps [Progressbar](https://tongfei.me/progressbar/).
@@ -17,6 +20,7 @@ An example that tracks the progress in emitting the letters of the alphabet:
 
 ```scala
 import fs2.Stream
+import fs2.progress.ProgressBar
 import scala.concurrent.duration._
 import cats.effect.IO
 
