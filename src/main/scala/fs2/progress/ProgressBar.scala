@@ -1,4 +1,4 @@
-package example
+package fs2.progress
 
 import cats.effect.IO
 import me.tongfei.progressbar.{ProgressBar => pBar}
@@ -21,7 +21,7 @@ object ProgressBar {
 
       override def pipe[A]: Pipe[F,A,A] = { input =>
         input.zipWithIndex.evalTap { case (_, idx) =>
-          stepTo(idx)
+          stepTo(idx + 1)
         }.map(_._1)
       }
 
