@@ -6,12 +6,14 @@ A command line progress bar that you can feed your streams to. Published for Sca
 
 Wraps [Progressbar](https://tongfei.me/progressbar/).
 
+You can find the scaladoc for the latest version [here](https://keirlawson.github.io/fs2-progress/latest/api/fs2/progress/index.html).
+
 ## Installation
 
 Add the following to your SBT library dependencies:
 
 ```
-"io.github.keirlawson" %% "fs2-progress" % "0.2.0"
+"io.github.keirlawson" %% "fs2-progress" % "1.0.0"
 ```
 
 ## Usage

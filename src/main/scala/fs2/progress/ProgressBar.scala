@@ -77,6 +77,9 @@ trait ProgressBar[F[_]] {
    */
   def stepTo(n: Long): F[Unit]
 
+  /**
+    * Increments the progress bar with the index of the stream element currently being processed.
+    */
   def pipe[A]: Pipe[F, A, A]
   
 }
