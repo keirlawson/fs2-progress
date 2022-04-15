@@ -13,8 +13,11 @@ lazy val root = (project in file("."))
       "co.fs2" %% "fs2-core" % "3.2.7"
     ),
     crossScalaVersions := List(scala213, scala3),
-    releaseCrossBuild := true
+    releaseCrossBuild := true,
+    git.remoteRepo := "git@github.com:keirlawson/fs2-progress.git",
   )
+  .enablePlugins(GhpagesPlugin)
+  .enablePlugins(SiteScaladocPlugin)
 
 publishTo := sonatypePublishToBundle.value
 publishMavenStyle := true
