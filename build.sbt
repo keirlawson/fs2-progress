@@ -1,5 +1,5 @@
 ThisBuild / scalaVersion     := "2.13.8"
-ThisBuild / version          := "0.1.0-SNAPSHOT"
+ThisBuild / versionScheme := Some("early-semver")
 ThisBuild / organization     := "io.github.keirlawson"
 
 lazy val root = (project in file("."))
@@ -15,6 +15,7 @@ publishTo := sonatypePublishToBundle.value
 publishMavenStyle := true
 sonatypeProfileName := "io.github.keirlawson"
 sonatypeCredentialHost := "s01.oss.sonatype.org"
+sonatypeRepository := "https://s01.oss.sonatype.org/service/local"
 
 licenses := Seq("APL2" -> url("http://www.apache.org/licenses/LICENSE-2.0.txt"))
 
